@@ -24,6 +24,6 @@ jobs:
       with:
         image: covid-survey/covid-survey
         tags: ${{ env.VERSION }},latest
-        registry: ghcr.io
+        registry: docker.pkg.github.com
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
