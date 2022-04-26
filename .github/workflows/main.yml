@@ -24,6 +24,6 @@ jobs:
       with:
         image: webhelpdesk/webhelpdesk
         tags: ${{ env.VERSION }},latest
-        registry: docker.pkg.github.com
+        registry: ghcr.io
         username: ${{ github.actor }}
         password: ${{ secrets.GHCR_TOKEN }}
