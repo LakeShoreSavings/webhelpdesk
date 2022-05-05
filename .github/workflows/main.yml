@@ -22,7 +22,7 @@ jobs:
     - uses: mr-smithers-excellent/docker-build-push@v5
       name: Build & Push Docker Images
       with:
-        image: lakeshoresavings/webhelpdesk
+        image: webhelpdesk
         tags: ${{ env.VERSION }},latest
         registry: ghcr.io
         username: ${{ github.actor }}
