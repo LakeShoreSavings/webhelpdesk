@@ -20,7 +20,7 @@ ADD functions /etc/rc.d/init.d/functions
 ADD http://downloads.solarwinds.com/solarwinds/Release/WebHelpDesk/$PRODUCT_VERSION/$PRODUCT_NAME /$GZIP_FILE
 
 
-RUN dnf update -y && dnf install -y python3-devel && pip3 install supervisor
+RUN dnf update -y && dnf install -y python3-devel urw-base35-fonts && pip3 install supervisor && dnf clean all
 RUN gunzip -dv /$GZIP_FILE && dnf install -y /$RPM_FILE && rm /$RPM_FILE && rm -rf /var/cache/dnf
 RUN cp $WHD_HOME/conf/whd.conf.orig $WHD_HOME/conf/whd.conf && sed -i 's/^PRIVILEGED_NETWORKS=[[:space:]]*$/PRIVILEGED_NETWORKS=0.0.0.0\/0/g' $WHD_HOME/conf/whd.conf
 
