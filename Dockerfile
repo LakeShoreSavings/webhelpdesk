@@ -8,7 +8,7 @@ VOLUME /backup
 
 # ADDING THIS TO CONNECT TO EXTERNAL POSTGRES -> OVERRIDE IN RUN COMMAND OR IN COMPOSE FILE
 ENV DB_HOST=postgres-whd
-ENV CONSOLETYPE=serial PRODUCT_VERSION=12.7.8 PRODUCT_NAME=webhelpdesk-12.7.8.8471-1.x86_64.rpm.gz GZIP_FILE=webhelpdesk.rpm.gz RPM_FILE=webhelpdesk.rpm EMBEDDED=${EMBEDDED:-true} WHD_HOME=/usr/local/webhelpdesk
+ENV CONSOLETYPE=serial PRODUCT_VERSION=12.7.9 PRODUCT_NAME=webhelpdesk-12.7.9.8603-1.x86_64.rpm.gz GZIP_FILE=webhelpdesk.rpm.gz RPM_FILE=webhelpdesk.rpm EMBEDDED=${EMBEDDED:-true} WHD_HOME=/usr/local/webhelpdesk
 
 RUN echo Environment :: $EMBEDDED
 
